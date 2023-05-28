@@ -1,0 +1,52 @@
+[
+    {
+        "detector": "nai_33",
+        "sources": [
+            {
+                "source": "cs_137",
+                "brackets": [
+                    {
+                        "start": 4000,
+                        "end": 5500,
+                        "color": "red",
+                        "energy": 662
+                    }
+                ]
+            },
+            {
+                "source": "na_22",
+                "brackets": [
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "color": "red",
+                        "energy": 511
+                    },
+                    {
+                        "start": 5200,
+                        "end": 6400,
+                        "color": "orange",
+                        "energy": 1275
+                    }
+                ]
+            },
+            {
+                "source": "co_60",
+                "brackets": [
+                    {
+                        "start": 4700,
+                        "end": 5600,
+                        "color": "red",
+                        "energy": 1173
+                    },
+                    {
+                        "start": 5560,
+                        "end": 6500,
+                        "color": "orange",
+                        "energy": 1332
+                    }
+                ]
+            }
+        ]
+    }
+]
