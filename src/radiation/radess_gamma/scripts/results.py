@@ -1,6 +1,6 @@
-from math import exp, pi, sqrt
-from os import listdir, path
 from json import load
+from math import pi, sqrt
+from os import path
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -14,7 +14,7 @@ img_dir = path.normpath(f"{current_dir}/../img")
 matplotlib.rcParams["mathtext.fontset"] = "stix"
 matplotlib.rcParams["font.family"] = "STIXGeneral"
 
-f = open(current_dir + "/spec_params.json")
+f = open(current_dir + "/spec_params.json", encoding="utf8")
 spec_params = load(f)
 
 
@@ -35,7 +35,12 @@ for detect in spec_params:
     for source in detect["sources"]:
         # Load data
         filename = f"{detect['detector']}_{source['source']}"
-        x, y = np.genfromtxt(f"{data_dir}/{filename}", delimiter=" ").T
+        filepath = f"{data_dir}/{filename}"
+        if not path.isfile(filepath):
+            print(f"Missing file at {filepath}")
+            continue
+
+        x, y = np.genfromtxt(filepath, delimiter=" ").T
 
         # Plot spectrum
         fig, ax = plt.subplots()
@@ -46,7 +51,7 @@ for detect in spec_params:
             half_point = b["start"] + ((b["end"] - b["start"]) / 2)
             _x = x[b["start"] : b["end"]]
             _y = y[b["start"] : b["end"]]
-            popt, pcov = curve_fit(normal, _x, _y, p0=[10**5, 100, half_point])
+            popt = curve_fit(normal, _x, _y, p0=(10**5, 100, half_point))[0]
 
             # Add mu value for calibration
             calibration["channel"].append(popt[2])
@@ -74,8 +79,11 @@ for detect in spec_params:
     y = np.array(calibration["energy"])
     ax.plot(x, y, "o")
 
-    popt, _ = curve_fit(cuad, x, y)
-    print(popt)
+    if np.size(y) < 3:
+        print(f"Missing channel data for calibration at detector {detect['detector']}")
+        continue
+
+    popt = curve_fit(cuad, x, y)[0]
     # Plot curve fit
     _x = np.linspace(np.amin(x), np.amax(x))
     ax.plot(

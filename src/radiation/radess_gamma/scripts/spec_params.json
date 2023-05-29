@@ -48,5 +48,105 @@
                 ]
             }
         ]
+    },
+    {
+        "detector": "hpge",
+        "sources": [
+            {
+                "source": "cs_137",
+                "brackets": [
+                    {
+                        "start": 4500,
+                        "end": 4800,
+                        "color": "red",
+                        "energy": 662
+                    }
+                ]
+            },
+            {
+                "source": "na_22",
+                "brackets": [
+                    {
+                        "start": 2200,
+                        "end": 2500,
+                        "color": "red",
+                        "energy": 511
+                    },
+                    {
+                        "start": 5700,
+                        "end": 6000,
+                        "color": "orange",
+                        "energy": 1275
+                    }
+                ]
+            },
+            {
+                "source": "co_60",
+                "brackets": [
+                    {
+                        "start": 5100,
+                        "end": 5300,
+                        "color": "red",
+                        "energy": 1173
+                    },
+                    {
+                        "start": 5800,
+                        "end": 6100,
+                        "color": "orange",
+                        "energy": 1332
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "detector": "bgo",
+        "sources": [
+            {
+                "source": "cs_137",
+                "brackets": [
+                    {
+                        "start": 4000,
+                        "end": 5400,
+                        "color": "red",
+                        "energy": 662
+                    }
+                ]
+            },
+            {
+                "source": "na_22",
+                "brackets": [
+                    {
+                        "start": 1900,
+                        "end": 2800,
+                        "color": "red",
+                        "energy": 511
+                    },
+                    {
+                        "start": 5300,
+                        "end": 6500,
+                        "color": "orange",
+                        "energy": 1275
+                    }
+                ]
+            },
+            {
+                "source": "co_60",
+                "brackets": [
+                    {
+                        "start": 4700,
+                        "end": 5600,
+                        "color": "red",
+                        "energy": 1173
+                    },
+                    {
+                        "start": 5600,
+                        "end": 6600,
+                        "color": "orange",
+                        "energy": 1332
+                    }
+                ]
+            }
+        ]
     }
 ]
