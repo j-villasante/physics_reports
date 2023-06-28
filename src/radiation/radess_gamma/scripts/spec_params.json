@@ -9,7 +9,9 @@
                         "start": 4000,
                         "end": 5500,
                         "color": "red",
-                        "energy": 662
+                        "energy": 662,
+                        "time": 5,
+                        "yield": 0.85
                     }
                 ]
             },
@@ -20,13 +22,17 @@
                         "start": 2000,
                         "end": 3000,
                         "color": "red",
-                        "energy": 511
+                        "energy": 511,
+                        "time": 5,
+                        "yield": 1.8
                     },
                     {
                         "start": 5200,
                         "end": 6400,
                         "color": "orange",
-                        "energy": 1275
+                        "energy": 1275,
+                        "time": 5,
+                        "yield": 1
                     }
                 ]
             },
@@ -37,13 +43,17 @@
                         "start": 4700,
                         "end": 5600,
                         "color": "red",
-                        "energy": 1173
+                        "energy": 1173,
+                        "time": 15,
+                        "yield": 0.99
                     },
                     {
                         "start": 5560,
                         "end": 6500,
                         "color": "orange",
-                        "energy": 1332
+                        "energy": 1332,
+                        "time": 15,
+                        "yield": 1
                     }
                 ]
             }
@@ -59,7 +69,9 @@
                         "start": 4500,
                         "end": 4800,
                         "color": "red",
-                        "energy": 662
+                        "energy": 662,
+                        "time": 30,
+                        "yield": 0.85
                     }
                 ]
             },
@@ -70,13 +82,17 @@
                         "start": 2200,
                         "end": 2500,
                         "color": "red",
-                        "energy": 511
+                        "energy": 511,
+                        "time": 30,
+                        "yield": 1.8
                     },
                     {
                         "start": 5700,
                         "end": 6000,
                         "color": "orange",
-                        "energy": 1275
+                        "energy": 1275,
+                        "time": 30,
+                        "yield": 1
                     }
                 ]
             },
@@ -87,13 +103,17 @@
                         "start": 5100,
                         "end": 5300,
                         "color": "red",
-                        "energy": 1173
+                        "energy": 1173,
+                        "time": 30,
+                        "yield": 0.99
                     },
                     {
                         "start": 5800,
                         "end": 6100,
                         "color": "orange",
-                        "energy": 1332
+                        "energy": 1332,
+                        "time": 30,
+                        "yield": 1
                     }
                 ]
             }
@@ -109,7 +129,9 @@
                         "start": 4000,
                         "end": 5400,
                         "color": "red",
-                        "energy": 662
+                        "energy": 662,
+                        "time": 5,
+                        "yield": 0.85
                     }
                 ]
             },
@@ -120,13 +142,17 @@
                         "start": 1900,
                         "end": 2800,
                         "color": "red",
-                        "energy": 511
+                        "energy": 511,
+                        "time": 5,
+                        "yield": 1.8
                     },
                     {
                         "start": 5300,
                         "end": 6500,
                         "color": "orange",
-                        "energy": 1275
+                        "energy": 1275,
+                        "time": 5,
+                        "yield": 1
                     }
                 ]
             },
@@ -137,13 +163,17 @@
                         "start": 4700,
                         "end": 5600,
                         "color": "red",
-                        "energy": 1173
+                        "energy": 1173,
+                        "time": 10,
+                        "yield": 0.99
                     },
                     {
                         "start": 5600,
                         "end": 6600,
                         "color": "orange",
-                        "energy": 1332
+                        "energy": 1332,
+                        "time": 10,
+                        "yield": 1
                     }
                 ]
             }

@@ -1,0 +1,243 @@
+[
+	{
+		"files": [
+			{
+				"label": "${}^{137}Cs$",
+				"filename": "calibration_cs.csv"
+			},
+			{
+				"label": "${}^{60}Co$",
+				"filename": "calibration_co.csv"
+			}
+		],
+		"name": "calibration_spec"
+	},
+	{
+		"file": "sum_peak_1.csv",
+		"use_calibration": true,
+		"name": "sum_peak_1",
+		"peaks": [
+			{
+				"start": 400,
+				"end": 500,
+				"dx": 25,
+				"y": 3800
+			},
+			{
+				"start": 500,
+				"end": 600,
+				"dx": 0,
+				"y": 3100
+			},
+			{
+				"start": 900,
+				"end": 1024,
+				"dx": -100,
+				"y": 170
+			}
+		]
+	},
+	{
+		"file": "sum_peak_2.csv",
+		"use_calibration": true,
+		"name": "sum_peak_2",
+		"peaks": [
+			{
+				"start": 400,
+				"end": 500,
+				"dx": 25,
+				"y": 3200
+			},
+			{
+				"start": 500,
+				"end": 600,
+				"dx": 0,
+				"y": 2650
+			},
+			{
+				"start": 900,
+				"end": 1024,
+				"dx": -100,
+				"y": 170
+			}
+		]
+	},
+	{
+		"file": "sum_peak_3.csv",
+		"use_calibration": true,
+		"name": "sum_peak_3",
+		"peaks": [
+			{
+				"start": 400,
+				"end": 500,
+				"dx": 25,
+				"y": 2900
+			},
+			{
+				"start": 500,
+				"end": 600,
+				"dx": 0,
+				"y": 2300
+			},
+			{
+				"start": 900,
+				"end": 1024,
+				"dx": -100,
+				"y": 170
+			}
+		]
+	},
+	{
+		"file": "sum_peak_4.csv",
+		"use_calibration": true,
+		"name": "sum_peak_4",
+		"peaks": [
+			{
+				"start": 400,
+				"end": 500,
+				"dx": 25,
+				"y": 1900
+			},
+			{
+				"start": 500,
+				"end": 600,
+				"dx": 0,
+				"y": 1500
+			},
+			{
+				"start": 900,
+				"end": 1024,
+				"dx": -120,
+				"y": 100
+			}
+		]
+	},
+	{
+		"file": "sum_peak_5.csv",
+		"use_calibration": true,
+		"name": "sum_peak_5",
+		"peaks": [
+			{
+				"start": 400,
+				"end": 500,
+				"dx": 25,
+				"y": 1400
+			},
+			{
+				"start": 500,
+				"end": 600,
+				"dx": 0,
+				"y": 1100
+			},
+			{
+				"start": 900,
+				"end": 1024,
+				"dx": -120,
+				"y": 100
+			}
+		]
+	},	
+	{
+		"file": "sum_peak_6.csv",
+		"use_calibration": true,
+		"name": "sum_peak_6",
+		"peaks": [
+			{
+				"start": 400,
+				"end": 500,
+				"dx": 25,
+				"y": 1000
+			},
+			{
+				"start": 500,
+				"end": 600,
+				"dx": 0,
+				"y": 800
+			}
+		]
+	},
+	{
+		"file": "lead_1.csv",
+		"use_calibration": true,
+		"name": "lead_1",
+		"peaks": [
+			{
+				"start": 200,
+				"end": 350,
+				"dx": 25,
+				"y": 18500,
+				"area": true
+			}
+		]
+	},
+	{
+		"file": "lead_2.csv",
+		"use_calibration": true,
+		"name": "lead_2",
+		"peaks": [
+			{
+				"start": 200,
+				"end": 350,
+				"dx": 25,
+				"y": 17500,
+				"area": true
+			}
+		]
+	},
+	{
+		"file": "lead_3.csv",
+		"use_calibration": true,
+		"name": "lead_3",
+		"peaks": [
+			{
+				"start": 200,
+				"end": 350,
+				"dx": 25,
+				"y": 14500,
+				"area": true
+			}
+		]
+	},
+	{
+		"file": "lead_4.csv",
+		"use_calibration": true,
+		"name": "lead_4",
+		"peaks": [
+			{
+				"start": 200,
+				"end": 350,
+				"dx": 25,
+				"y": 9000,
+				"area": true
+			}
+		]
+	},
+	{
+		"file": "lead_5.csv",
+		"use_calibration": true,
+		"name": "lead_5",
+		"peaks": [
+			{
+				"start": 200,
+				"end": 350,
+				"dx": 25,
+				"y": 6000,
+				"area": true
+			}
+		]
+	},
+	{
+		"file": "lead_6.csv",
+		"use_calibration": true,
+		"name": "lead_6",
+		"peaks": [
+			{
+				"start": 200,
+				"end": 350,
+				"dx": 25,
+				"y": 3500,
+				"area": true
+			}
+		]
+	}
+]
