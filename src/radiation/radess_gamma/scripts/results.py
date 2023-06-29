@@ -146,6 +146,22 @@ for detect in spec_params:
         x, y = np.genfromtxt(f"{data_dir}/unknown_source", delimiter=" ").T
         x = linear(x, *popt)
         ax.plot(x, y, label="Eventos", color="black", linewidth=0.1)
+
+        for (s, e) in [(2500, 3700), (4500, 5700),]:
+            half_point = s + ((e - s) / 2)
+            _x = x[s : e]
+            _y = y[s : e]
+            (n, sigma, mu) = curve_fit(normal, _x, _y, p0=(50, 1000, half_point))[0]
+            ax.annotate(f"{mu:.0f}keV", (mu + 20, normal(mu, n, sigma, mu) + 20))
+            # ax.plot(
+            #     _x,
+            #     normal(_x, n, sigma, mu),
+            #     label=f"$\mu={round(mu)}, \sigma={round(sigma)}$",
+            #     linewidth=1.5,
+            # )
+        
+        ax.set_xlabel("Energía (keV)")
+        ax.set_ylabel("Eventos")
         plt.savefig(f"{img_dir}/unknown_source.pdf")
 
     # plot efficiency
