@@ -28,7 +28,7 @@
 		\begin{center}
 			{\renewcommand{\arraystretch}{1.5}
 			\renewcommand{\tabcolsep}{0.2cm}
-			\captionof{table}{Isotipos utlizados en la calibración y sus energías de decaimiento. \cite{university_co-60_nodate}\cite{university_cs-137_nodate}\cite{university_na-22_nodate}}
+			\captionof{table}{Isotipos utlizados en la calibración y sus energías de decaimiento gamma. \cite{university_co-60_nodate}\cite{university_cs-137_nodate}\cite{university_na-22_nodate}}
 			\label{table_energies}
 			\begin{tabular}{ c c c }
 				\hline
@@ -65,10 +65,10 @@
 			\captionof{figure}{Espectro de una fuente de ${}^{60}\mathrm{Co}$ obtenido de un detector NaI3x3 ajustado a un par de distribuciones normales.}
 		\end{center}
 
-		Con estas mediciones y tomando en cuenta las energías teóricas se realizó la calibración de la energía respecto al canal. En este caso se realizó un ajuste cuadrático. La energía está dada por
+		Con estas mediciones y tomando en cuenta las energías teóricas se realizó la calibración de la energía respecto al canal. En este caso se realizó un ajuste lineal. La energía está dada por
 
 		$$
-		E=ax^2+bx+c
+		E=ax+b
 		$$
 
 		donde x es el canal.
@@ -218,7 +218,7 @@
 		R \equiv \frac{\mathrm{FWHM}}{H_0}
 		$$
 
-		Como hemos hecho un ajuste gaussiano, se ha obtenido la resolución para cada pico utilizando
+		Como hemos hecho un ajuste gaussiano, podemos obtener la resolución para cada pico utilizando
 		$$
 		R = \frac{2.355\sigma}{\mu}
 		$$
@@ -244,14 +244,14 @@
 				${}^{60}\mathrm{Co}$  & 1332 & 0.0666
 			\end{tabular}}
 		\end{center}
-	\section{Discusión}
+	\section{Conclusiones}
 		Lo primero a notar es la diferencia en resolución entre los detectores. El que produjo mayor error fue el detector BGO, produciendo los mayores valores de $\sigma$ al realizar el ajuste. En cambio el detector HGPe tuvo una muy alta resolución. Al realizar el ajuste prácticamente se obtuvo una delta de Dirac, y un sigma muy pequeño.
 
 		Luego, también notamos la diferencia en eficiencia. Vemos que el detector HPGe es el que obtuvo los menores valores de eficiencia. Por otro lado, el rango de eficiencia del detector NaI3x3 incluye a la eficiencia del detector BGO, por lo que dependiendo de la energía el detector BGO puede ser más o menos eficiente que el detector de NaI3x3.
 
 		Sobre la resolución de energía, vemos que a medida aumenta la energía es mejor la resolución. Por tal motivo, para radio núcleos de mayor energía se obtendrá un resultado más preciso.
-	\section{Conclusiones}
-		En primer lugar se demostró que cada uno de los picos se pudo ajustar a una distribución normal.
+
+		Finalmente, se demostró que cada uno de los picos se pudo ajustar a una distribución normal.
 	\bibliography{citations}
 	\bibliographystyle{ieeetr}
 \end{document}
