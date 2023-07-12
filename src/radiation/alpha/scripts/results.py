@@ -1,5 +1,5 @@
 from json import load
-from math import pi, sqrt, log
+from math import pi, sqrt, ceil
 from os import path
 
 import matplotlib
@@ -29,8 +29,8 @@ def normal(x, n, sigma, mu):
     return n * np.exp(-(((x - mu) / sigma) ** 2) / 2) / (sigma * sqrt(2 * pi))
 
 fig, ax = plt.subplots()
-x = np.array([260.97, 453.19, 519.29])
-y = np.array([662, 1173, 1332])
+x = np.array([565.26, 601.77, 636.26])
+y = np.array([5155.5, 5486, 5901.7])
 popt = curve_fit(linear, x, y)[0]
 _x = np.linspace(np.amin(x), np.amax(x))
 ax.plot(
@@ -53,7 +53,6 @@ table = {
     "energy": [],
     "fwhm": [],
     "net_area": [],
-    "ln_i": [],
 }
 
 for image in spec_params:
@@ -61,7 +60,7 @@ for image in spec_params:
     fig, ax = plt.subplots()
 
     if "file" in image:
-        x, y = np.genfromtxt(f"{data_dir}/{image['file']}", delimiter="\t").T
+        x, y = np.genfromtxt(f"{data_dir}/{image['file']}", delimiter=",").T
         if image["use_calibration"]:
             x = linear(x, *popt)
 
@@ -69,15 +68,18 @@ for image in spec_params:
                 half_point = peak["start"] + ((peak["end"] - peak["start"]) / 2)
                 _x = x[peak["start"] : peak["end"]]
                 _y = y[peak["start"] : peak["end"]]
-                (n, sigma, mu) = curve_fit(normal, _x, _y, p0=(10**5, 500, half_point))[0]
+                p0_sigma = peak["sigma"] if "sigma" in peak else 600
+                (n, sigma, mu) = curve_fit(normal, _x, _y, p0=(10**5, p0_sigma, half_point))[0]
                 delta = 2.355 * sigma
+
                 # ax.plot(
                 #     _x,
                 #     normal(_x, n, sigma, mu),
                 #     label=f"$\mu={round(mu)}, \sigma={round(sigma)}$",
                 # )
-                # ax.plot(np.array([mu - delta, mu - delta]), np.array([0, 5000]))
-                # ax.plot(np.array([mu + delta, mu + delta]), np.array([0, 5000]))
+                # ax.plot(np.array([mu - delta, mu - delta]), np.array([0, 100]))
+                # ax.plot(np.array([mu + delta, mu + delta]), np.array([0, 100]))
+                
                 area = np.sum(y[inverse_linear(mu - delta, *popt) : inverse_linear(mu + delta, *popt)])
                 if "area" in peak and peak["area"]:
                     areas.append(area)
@@ -90,7 +92,6 @@ for image in spec_params:
                 table["energy"].append(mu)
                 table["fwhm"].append(delta)
                 table["net_area"].append(f"a{area:.3g}")
-                table["ln_i"].append(log(area))
 
         ax.plot(x, y, linewidth=0.75)
     else:
@@ -109,23 +110,4 @@ for image in spec_params:
     plt.savefig(f"{img_dir}/{image['name']}.pdf", bbox_inches="tight")
 
 
-x = np.array([0, 1.2, 2.4, 6.2, 10, 15.7])
-x = 11.34 * x / 10
-y = np.log(np.array(areas))
-
-fig, ax = plt.subplots()
-popt = curve_fit(linear, x, y)[0]
-_x = np.linspace(np.amin(x), np.amax(x))
-ax.plot(
-    _x,
-    linear(_x, *popt),
-    label=f"$y = {popt[0]:.03g}x+{popt[1]:.03g}$",
-)
-ax.plot(x, y, "o")
-ax.set_xlabel("$\\rho x$ (g/mm²)")
-ax.set_ylabel("$\\ln(I_\\gamma)$")
-ax.legend()
-plt.savefig(f"{img_dir}/thickness_vs_area.pdf", bbox_inches="tight")
-
-table["ep"] = x
 print(tabulate(table, headers="keys"))

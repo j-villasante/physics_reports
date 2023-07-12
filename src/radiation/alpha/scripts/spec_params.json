@@ -1,0 +1,187 @@
+[
+	{
+		"file": "air.csv",
+		"use_calibration": true,
+		"name": "air",
+		"peaks": [
+			{
+				"start": 348,
+				"end": 390,
+				"dx": -1200,
+				"y": 100
+			},
+			{
+				"start": 390,
+				"end": 435,
+				"dx": 100,
+				"y": 105
+			},
+			{
+				"start": 435,
+				"end": 480,
+				"dx": 200,
+				"y": 100
+			}
+		]
+	},
+	{
+		"file": "vacuum.csv",
+		"use_calibration": true,
+		"name": "vacuum",
+		"peaks": [
+			{
+				"start": 550,
+				"end": 580,
+				"dx": -1200,
+				"y": 350
+			},
+			{
+				"start": 580,
+				"end": 610,
+				"dx": 100,
+				"y": 350,
+				"sigma": 900
+			},
+			{
+				"start": 615,
+				"end": 643,
+				"dx": 200,
+				"y": 300,
+				"sigma": 900
+			}
+		]
+	},
+	{
+		"file": "vacuum_2.csv",
+		"use_calibration": true,
+		"name": "vacuum_2",
+		"peaks": [
+			{
+				"start": 360,
+				"end": 450,
+				"dx": -500,
+				"y": 125,
+				"sigma": 500
+			},
+			{
+				"start": 550,
+				"end": 570,
+				"dx": -1200,
+				"y": 500,
+				"sigma": 900
+			},
+			{
+				"start": 580,
+				"end": 610,
+				"dx": 100,
+				"y": 490,
+				"sigma": 900
+			},
+			{
+				"start": 615,
+				"end": 643,
+				"dx": 200,
+				"y": 410,
+				"sigma": 900
+			}
+		]
+	},
+	{
+		"file": "toron.csv",
+		"use_calibration": true,
+		"name": "toron",
+		"peaks": [
+			{
+				"start": 650,
+				"end": 670,
+				"dx": 100,
+				"y": 35,
+				"sigma": 800
+			},
+			{
+				"start": 930,
+				"end": 1000,
+				"dx": -1500,
+				"y": 70,
+				"sigma": 2000
+			}
+		]
+	},
+	{
+		"file": "toron_2.csv",
+		"use_calibration": true,
+		"name": "toron_2",
+		"peaks": [
+			{
+				"start": 650,
+				"end": 670,
+				"dx": 100,
+				"y": 55,
+				"sigma": 800
+			},
+			{
+				"start": 930,
+				"end": 1000,
+				"dx": -1500,
+				"y": 120,
+				"sigma": 2500
+			}
+		]
+	},
+	{
+		"file": "d1.csv",
+		"use_calibration": true,
+		"name": "d1",
+		"peaks": [
+			{
+				"start": 550,
+				"end": 580,
+				"dx": -1200,
+				"y": 1150,
+				"sigma": 1500
+			},
+			{
+				"start": 580,
+				"end": 610,
+				"dx": 100,
+				"y": 1150,
+				"sigma": 900
+			},
+			{
+				"start": 615,
+				"end": 643,
+				"dx": 200,
+				"y": 1000,
+				"sigma": 900
+			}
+		]
+	},
+	{
+		"file": "d2.csv",
+		"use_calibration": true,
+		"name": "d2",
+		"peaks": [
+			{
+				"start": 550,
+				"end": 580,
+				"dx": -1200,
+				"y": 175,
+				"sigma": 1500
+			},
+			{
+				"start": 580,
+				"end": 610,
+				"dx": 100,
+				"y": 175,
+				"sigma": 900
+			},
+			{
+				"start": 615,
+				"end": 643,
+				"dx": 200,
+				"y": 130,
+				"sigma": 900
+			}
+		]
+	}
+]
