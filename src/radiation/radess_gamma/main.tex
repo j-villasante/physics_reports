@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
+\usepackage{multirow}
 % Configure bibtext
 \usepackage{cite}
 \setlength{\parindent}{0pt}
@@ -242,6 +243,29 @@
 				${}^{22}\mathrm{Na}$  & 1275 & 0.0688 \\ 
 				${}^{60}\mathrm{Co}$ & 1173 & 0.0829 \\ 
 				${}^{60}\mathrm{Co}$  & 1332 & 0.0666
+			\end{tabular}}
+		\end{center}
+
+		\subsection{Identificación de una fuente desconocida}
+		Utilizando el detector NaI3x3 y la calibración antes obtenida, se obtuvo la espectrografía de una fuente desconocida y se pudo identificar los pico de energía.
+		\begin{center}
+			\includegraphics[width=210pt]{img/unknown_source.pdf}
+			\captionof{figure}{Espectrografía de una fuente desconocida.}
+		\end{center}
+		\begin{center}
+			{\renewcommand{\arraystretch}{1.5}
+			\renewcommand{\tabcolsep}{0.2cm}
+			\captionof{table}{Identificación de posibles radionúcleos. \cite{noauthor_eml_1997}}
+			\label{table_energy_resolution}
+			\begin{tabular}{ c c c c }
+				\hline
+				& \multicolumn{2}{c}{Posibles núcleos} \\
+				\hline
+				Energía medida (keV) & Energía (keV) & \% & Núcleo \\
+				\hline
+				604 & 569 / 511 & 97.8 / 2.9 & \multirow{2}{*}{${}^{207}\mathrm{Bi}$ / ${}^{65}\mathrm{Zn}$}  \\
+				1061 & 1063.1 / 1115.5 & 74.9 / 50.8 &  \\
+				\hline
 			\end{tabular}}
 		\end{center}
 	\section{Conclusiones}

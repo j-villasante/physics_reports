@@ -5,3 +5,5 @@
 *.log
 src/*.pdf
 *.gz
+*.blg
+*.bbl
