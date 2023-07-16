@@ -160,10 +160,11 @@
 		"file": "lead_1.csv",
 		"use_calibration": true,
 		"name": "lead_1",
+		"manual_area": true,
 		"peaks": [
 			{
-				"start": 200,
-				"end": 350,
+				"start": 221,
+				"end": 296,
 				"dx": 25,
 				"y": 18500,
 				"area": true
@@ -174,10 +175,11 @@
 		"file": "lead_2.csv",
 		"use_calibration": true,
 		"name": "lead_2",
+		"manual_area": true,
 		"peaks": [
 			{
-				"start": 200,
-				"end": 350,
+				"start": 221,
+				"end": 296,
 				"dx": 25,
 				"y": 17500,
 				"area": true
@@ -188,10 +190,11 @@
 		"file": "lead_3.csv",
 		"use_calibration": true,
 		"name": "lead_3",
+		"manual_area": true,
 		"peaks": [
 			{
-				"start": 200,
-				"end": 350,
+				"start": 221,
+				"end": 296,
 				"dx": 25,
 				"y": 14500,
 				"area": true
@@ -202,10 +205,11 @@
 		"file": "lead_4.csv",
 		"use_calibration": true,
 		"name": "lead_4",
+		"manual_area": true,
 		"peaks": [
 			{
-				"start": 200,
-				"end": 350,
+				"start": 221,
+				"end": 296,
 				"dx": 25,
 				"y": 9000,
 				"area": true
@@ -216,10 +220,11 @@
 		"file": "lead_5.csv",
 		"use_calibration": true,
 		"name": "lead_5",
+		"manual_area": true,
 		"peaks": [
 			{
-				"start": 200,
-				"end": 350,
+				"start": 221,
+				"end": 296,
 				"dx": 25,
 				"y": 6000,
 				"area": true
@@ -230,10 +235,11 @@
 		"file": "lead_6.csv",
 		"use_calibration": true,
 		"name": "lead_6",
+		"manual_area": true,
 		"peaks": [
 			{
-				"start": 200,
-				"end": 350,
+				"start": 221,
+				"end": 296,
 				"dx": 25,
 				"y": 3500,
 				"area": true

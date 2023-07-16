@@ -20,7 +20,7 @@
 
 	\section{Introducción}
 		El objetivo del presente informe es mostrar y comparar los diferentes espectros obtenido de diferentes fuentes y detectores. Las fuentes disponibles fueron ${}^{137}\mathrm{Cs}$, ${}^{22}\mathrm{Na}$ y ${}^{60}\mathrm{Co}$. Los detectores disponibles fueron NaI3x3, HPGe y BGO. Con las detecciones se obtuvo la calibración en energía y en eficiencia, y se identificó una fuente desconocida.
-	\section{Materiales y método}
+	\section{Método}
 		Se utilizó el simulador Radess. En este no es posible controlar el voltaje de la fuente de alto voltaje, ni la ganancia dada por el amplificador. Por lo tanto, estos no se modificaron. La fuente de alto voltaje se mantuvo constante en 900 voltios. Sin embargo, sí se controló el tiempo de medición y la distancia entre la fuente y el detector.
 
 	\section{Resultados}	
@@ -39,7 +39,8 @@
 				${}^{22}\mathrm{Na}$ & 180 & 511 \\ 
 				${}^{22}\mathrm{Na}$ & 100 & 1275 \\ 
 				${}^{60}\mathrm{Co}$ & 99 & 1173 \\ 
-				${}^{60}\mathrm{Co}$ & 100 & 1332
+				${}^{60}\mathrm{Co}$ & 100 & 1332 \\
+				\hline
 			\end{tabular}}
 		\end{center}
 
@@ -66,7 +67,7 @@
 			\captionof{figure}{Espectro de una fuente de ${}^{60}\mathrm{Co}$ obtenido de un detector NaI3x3 ajustado a un par de distribuciones normales.}
 		\end{center}
 
-		Con estas mediciones y tomando en cuenta las energías teóricas se realizó la calibración de la energía respecto al canal. En este caso se realizó un ajuste lineal. La energía está dada por
+		Con estas mediciones y tomando en cuenta las energías teóricas se realizó la calibración de la energía respecto al canal. En este caso se realizó un ajuste lineal. La energía estará dada por
 
 		$$
 		E=ax+b
@@ -85,15 +86,16 @@
 			{\renewcommand{\arraystretch}{1.5}
 			\renewcommand{\tabcolsep}{0.2cm}
 			\captionof{table}{Comparación entre la energía esperada por la curva de calibración y la energía teórica para el detector NaI3x3.}
-			\begin{tabular}{ c c c c }
+			\begin{tabular}{p{1.2cm} p{2cm} *{2}{p{2.5cm}} p{1cm}}
 				\hline
-				Isótopo & Probabilidad(\%) & Energía teórica (keV) & Energía esperada (keV) \\
+				Isótopo & Probabilidad (\%) & Energía teórica (keV) & Energía esperada (keV) & Error (\%) \\
 				\hline
-				${}^{137}\mathrm{Cs}$ & 85 & 662 & 782.29\\ 
-				${}^{22}\mathrm{Na}$ & 180 & 511 & 502.76\\ 
-				${}^{22}\mathrm{Na}$ & 100 & 1275 & 1314.75 \\ 
-				${}^{60}\mathrm{Co}$ & 99 & 1173 & 996.23 \\ 
-				${}^{60}\mathrm{Co}$ & 100 & 1332 & 1356.97
+				${}^{137}\mathrm{Cs}$ & 85 & 662 & 782.29 & 18.17\\
+				${}^{22}\mathrm{Na}$ & 180 & 511 & 502.76 & 1.16\\ 
+				${}^{22}\mathrm{Na}$ & 100 & 1275 & 1314.75 & 3.12\\
+				${}^{60}\mathrm{Co}$ & 99 & 1173 & 996.23 & 15.07\\
+				${}^{60}\mathrm{Co}$ & 100 & 1332 & 1356.97 & 1.88\\
+				\hline
 			\end{tabular}}
 		\end{center}
 
@@ -127,15 +129,16 @@
 			{\renewcommand{\arraystretch}{1.5}
 			\renewcommand{\tabcolsep}{0.2cm}
 			\captionof{table}{Comparación entre la energía esperada por la curva de calibración y la energía teórica para el detector HPGe.}
-			\begin{tabular}{ c c c c }
+			\begin{tabular}{p{1.2cm} p{2cm} *{2}{p{2.5cm}} p{1cm}}
 				\hline
-				Isótopo & Probabilidad(\%) & Energía teórica (keV) & Energía esperada (keV) \\
+				Isótopo & Probabilidad (\%) & Energía teórica (keV) & Energía esperada (keV) & Error (\%) \\
 				\hline
-				${}^{137}\mathrm{Cs}$ & 85 & 662 & 777.96\\ 
-				${}^{22}\mathrm{Na}$ & 180 & 511 & 502.86\\ 
-				${}^{22}\mathrm{Na}$ & 100 & 1275 & 1315.91 \\ 
-				${}^{60}\mathrm{Co}$ & 99 & 1173 & 999.76 \\ 
-				${}^{60}\mathrm{Co}$ & 100 & 1332 & 1356.50
+				${}^{137}\mathrm{Cs}$ & 85 & 662 & 777.96 & 17.52 \\ 
+				${}^{22}\mathrm{Na}$ & 180 & 511 & 502.86 & 1.59 \\ 
+				${}^{22}\mathrm{Na}$ & 100 & 1275 & 1315.91 & 3.21 \\ 
+				${}^{60}\mathrm{Co}$ & 99 & 1173 & 999.76 & 14.77 \\ 
+				${}^{60}\mathrm{Co}$ & 100 & 1332 & 1356.50 & 1.84 \\
+				\hline
 			\end{tabular}}
 		\end{center}
 
@@ -170,15 +173,16 @@
 			\renewcommand{\tabcolsep}{0.2cm}
 			\captionof{table}{Comparación entre la energía esperada por la curva de calibración y la energía teórica para el detector BGO.}
 			\label{table_expected_energies}
-			\begin{tabular}{ c c c c }
+			\begin{tabular}{p{1.2cm} p{2cm} *{2}{p{2.5cm}} p{1cm}}
 				\hline
-				Isótopo & Probabilidad(\%) & Energía teórica (keV) & Energía esperada (keV) \\
+				Isótopo & Probabilidad (\%) & Energía teórica (keV) & Energía esperada (keV) & Error (\%) \\
 				\hline
-				${}^{137}\mathrm{Cs}$ & 85 & 662 & 773.11\\ 
-				${}^{22}\mathrm{Na}$ & 180 & 511 & 503.15\\ 
-				${}^{22}\mathrm{Na}$ & 100 & 1275 & 1321.91 \\ 
-				${}^{60}\mathrm{Co}$ & 99 & 1173 & 1003.48 \\ 
-				${}^{60}\mathrm{Co}$ & 100 & 1332 & 1351.35
+				${}^{137}\mathrm{Cs}$ & 85 & 662 & 773.11 & 16.78 \\
+				${}^{22}\mathrm{Na}$ & 180 & 511 & 503.15 & 1.54 \\
+				${}^{22}\mathrm{Na}$ & 100 & 1275 & 1321.91  & 3.68 \\
+				${}^{60}\mathrm{Co}$ & 99 & 1173 & 1003.48  & 14.45 \\
+				${}^{60}\mathrm{Co}$ & 100 & 1332 & 1351.35 & 1.45 \\
+				\hline
 			\end{tabular}}
 		\end{center}
 
@@ -247,11 +251,14 @@
 		\end{center}
 
 		\subsection{Identificación de una fuente desconocida}
-		Utilizando el detector NaI3x3 y la calibración antes obtenida, se obtuvo la espectroscopía de una fuente desconocida y se pudo identificar los pico de energía.
+		Utilizando el detector NaI3x3 y la calibración antes obtenida, se obtuvo la espectroscopía de una fuente desconocida y se pudo identificar los picos de energía.
 		\begin{center}
 			\includegraphics[width=210pt]{img/unknown_source.pdf}
 			\captionof{figure}{Espectroscopía de una fuente desconocida.}
 		\end{center}
+
+		Tomando como referencia los picos de energía encontrados se buscó qué radionúcleos presentan las energías de decaimiento gamma encontradas.
+
 		\begin{center}
 			{\renewcommand{\arraystretch}{1.5}
 			\renewcommand{\tabcolsep}{0.2cm}
@@ -268,14 +275,18 @@
 				\hline
 			\end{tabular}}
 		\end{center}
+
+		En este caso vemos que el núcleo que mejor se acomoda a las energías encontradas es el ${}^{207}\mathrm{Bi}$. Cumple con las energías, y además, cumple con las probabilidades de decaimiento, ya que el pico de menor energía tiene mayor cantidad de eventos que el segundo.
 	\section{Conclusiones}
-		Lo primero a notar es la diferencia en resolución entre los detectores. El que produjo mayor error fue el detector BGO, produciendo los mayores valores de $\sigma$ al realizar el ajuste. En cambio el detector HGPe tuvo una muy alta resolución. Al realizar el ajuste prácticamente se obtuvo una delta de Dirac, y un sigma muy pequeño.
+		Cada detector produce un espectro diferente por lo que es necesario realizar una calibración por cada detector. El detector que presentó el error más grande en términos de la energía esperada fue el detector NaI3x3.
+
+		Luego notamos la diferencia en resolución entre los detectores. El que produjo mayor error al realizar el ajuste normal fue el detector BGO, produciendo los mayores valores de $\sigma$ al realizar el ajuste. En cambio el detector HGPe tuvo una muy alta resolución. Como vimos al realizar los ajustes de una distribución normal a los picos de energía, prácticamente se obtuvo una delta de Dirac, y un sigma muy pequeño.
 
 		Luego, también notamos la diferencia en eficiencia. Vemos que el detector HPGe es el que obtuvo los menores valores de eficiencia. Por otro lado, el rango de eficiencia del detector NaI3x3 incluye a la eficiencia del detector BGO, por lo que dependiendo de la energía el detector BGO puede ser más o menos eficiente que el detector de NaI3x3.
 
 		Sobre la resolución de energía, vemos que a medida aumenta la energía es mejor la resolución. Por tal motivo, para radio núcleos de mayor energía se obtendrá un resultado más preciso.
 
-		Finalmente, se demostró que cada uno de los picos se pudo ajustar a una distribución normal.
+		Finalmente, vemos que a partir de una calibración, podemos identificar cualquier radio núcleo cuyas energías caigan dentro de los canales configurados. En nuestro caso hemos podido identificar que el espectro corresponde a ${}^{207}$Bi.
 	\bibliography{citations}
 	\bibliographystyle{ieeetr}
 \end{document}

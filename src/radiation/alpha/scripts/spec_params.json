@@ -183,5 +183,63 @@
 				"sigma": 900
 			}
 		]
+	},
+	{
+		"file": "triple_atm_d1.csv",
+		"use_calibration": "2",
+		"name": "triple_atm_d1",
+		"only_data": true,
+		"peaks": [
+			{
+				"start": 364,
+				"end": 474,
+				"dx": -1300,
+				"y": 175,
+				"sigma": 1500
+			},
+			{
+				"start": 474,
+				"end": 515,
+				"dx": 100,
+				"y": 175,
+				"sigma": 1500
+			},
+			{
+				"start": 515,
+				"end": 554,
+				"dx": 200,
+				"y": 130,
+				"sigma": 1500
+			}
+		]
+	},
+	{
+		"file": "triple_atm_d3.csv",
+		"use_calibration": "2",
+		"name": "triple_atm_d3",
+		"only_data": true,
+		"peaks": [
+			{
+				"start": 257,
+				"end": 354,
+				"dx": -1300,
+				"y": 60,
+				"sigma": 1500
+			},
+			{
+				"start": 354,
+				"end": 399,
+				"dx": 100,
+				"y": 60,
+				"sigma": 1500
+			},
+			{
+				"start": 399,
+				"end": 450,
+				"dx": 200,
+				"y": 50,
+				"sigma": 1500
+			}
+		]
 	}
 ]
